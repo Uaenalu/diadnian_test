@@ -53,7 +53,6 @@ pages_text = st.text_input(
 
 with st.expander("📖 不知道获取页数有什么用？点击查看教程"):
     st.markdown("""
-### 获取 Cookie
 1. 在礼物记录中 https://y.tuwan.com/home/gift/
 2. 点击收到的礼物-> 查看赠送人
 3. 赠送人送的礼物的页数即为需要实时抓取的页数
