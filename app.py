@@ -32,8 +32,9 @@ cookie_text = st.text_area(
     help="仅本次运行使用，不会保存到服务器"
 )
 
-st.info("""
-📖 获取 Cookie：
+with st.expander("📖 不会获取 Cookie？点击查看教程"):
+    st.markdown("""
+### 获取 Cookie
 1. 登录兔玩后台（仅限网页版） https://y.tuwan.com/
 2. 按 F12 打开开发者工具 ｜｜ 鼠标右键点击检查
 3. 点击 Network（网络）
@@ -44,11 +45,19 @@ st.info("""
 """)
 
 
-st.markdown("### 2. 输入抓取页数")
+st.markdown("### 2. 输入需要抓取的页数")
 pages_text = st.text_input(
     "页数（例如：1,2,3,4,5）",
     value="1,2,3,4,5"
 )
+
+with st.expander("📖 不知道获取页数有什么用？点击查看教程"):
+    st.markdown("""
+### 获取 Cookie
+1. 在礼物记录中 https://y.tuwan.com/home/gift/
+2. 点击收到的礼物-> 查看赠送人
+3. 赠送人送的礼物的页数即为需要实时抓取的页数
+""")
 
 check_name = st.text_input(
     "指定验算昵称（可留空）"
