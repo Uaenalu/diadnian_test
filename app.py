@@ -32,7 +32,6 @@ cookie_text = st.text_area(
 )
 
 
-df_gift = pd.read_excel("gift_mapping.xlsx")
 
 st.markdown("### 2. 输入抓取页数")
 pages_text = st.text_input(
@@ -44,6 +43,9 @@ check_name = st.text_input(
     "指定验算昵称（可留空）"
 )
 
+# 直接读取仓库里的文件
+df_gift = pd.read_excel("gift_mapping.xlsx")
+
 if st.button("开始计算", type="primary"):
 
     try:
@@ -51,9 +53,6 @@ if st.button("开始计算", type="primary"):
             st.error("请先输入 Cookie")
             st.stop()
 
-        if gift_file is None:
-            st.error("请上传 gift_mapping.xlsx")
-            st.stop()
 
         cookies = {}
 
@@ -112,7 +111,6 @@ if st.button("开始计算", type="primary"):
             ["num", "create_time", "title", "name"]
         ]
 
-        df_gift = pd.read_excel(gift_file)
 
         df_log["gift_name"] = (
             df_log["title"]
