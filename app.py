@@ -25,11 +25,32 @@ def parse_wrapped_json(text):
     return json.loads(text)
 
 st.markdown("### 1. 粘贴 Cookie")
-cookie_text = st.text_area(
-    "Cookie（浏览器复制完整 Cookie）",
-    height=120,
-    help="仅本次运行使用，不会保存到服务器"
-)
+
+with st.expander("📖 不会获取 Cookie？点击查看教程"):
+    st.markdown("""
+**步骤 1：登录兔玩后台**
+
+打开：
+
+https://app.tuwan.com
+
+并完成登录。
+
+---
+
+**步骤 2：打开浏览器开发者工具**
+
+- Windows：按 `F12`
+- Mac：按 `Fn + F12`
+
+---
+
+**步骤 3：进入 Network（网络）**
+
+点击顶部：
+
+```text
+Network
 
 
 
