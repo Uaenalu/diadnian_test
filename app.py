@@ -34,10 +34,10 @@ cookie_text = st.text_area(
 
 st.info("""
 📖 获取 Cookie：
-1. 登录兔玩后台
-2. 按 F12 打开开发者工具
-3. 点击 Network
-4. 刷新页面
+1. 登录兔玩后台（仅限网页版） https://y.tuwan.com/
+2. 按 F12 打开开发者工具 ｜｜ 鼠标右键点击检查
+3. 点击 Network（网络）
+4. 刷新页面	
 5. 点开任意请求 → Headers
 6. 复制 Cookie
 7. 粘贴到上方输入框
