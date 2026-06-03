@@ -31,13 +31,10 @@ cookie_text = st.text_area(
     help="仅本次运行使用，不会保存到服务器"
 )
 
-st.markdown("### 2. 上传礼物映射表")
-gift_file = st.file_uploader(
-    "gift_mapping.xlsx",
-    type=["xlsx"]
-)
 
-st.markdown("### 3. 输入抓取页数")
+df_gift = pd.read_excel("gift_mapping.xlsx")
+
+st.markdown("### 2. 输入抓取页数")
 pages_text = st.text_input(
     "页数（例如：1,2,3,4,5）",
     value="1,2,3,4,5"
